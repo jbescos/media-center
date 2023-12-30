@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-    <!-- Default page to serve -->
     <welcome-file-list>
         <welcome-file>Gwtpsample.html</welcome-file>
     </welcome-file-list>
 
-    <!--
-         This Guice listener hijacks all further filters and servlets. Extra
-         filters and servlets have to be configured in your
-         ServletModule#configureServlets() by calling
-         serve(String).with(Class<? extends HttpServlet>) and
-         filter(String).through(Class<? extends Filter)
-     -->
     <listener>
-        <listener-class>com.gwtplatform.samples.basic.server.guice.GuiceServletConfig</listener-class>
+        <listener-class>com.github.jbescos.server.guice.GuiceServletConfig</listener-class>
     </listener>
 
     <filter>
